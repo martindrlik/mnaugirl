@@ -1,7 +1,9 @@
 <script lang="ts">
+	import Link from '$lib/Link.svelte';
+
 	let { post } = $props();
 </script>
 
-<a class="text-blue-800 hover:underline hover:text-black text-2xl" href={post.href}
-	>{post.headline}</a
->
+<div class="my-2.5">
+	<Link style="post" href={post.href}>{post.headline}</Link>
+</div>
