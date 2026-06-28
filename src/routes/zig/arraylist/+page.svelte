@@ -1,10 +1,10 @@
 <script lang="ts">
-	import Par from '$lib/article/Par.svelte';
 	import Article from '$lib/article/Article.svelte';
-	import { zig } from '$lib/post/Data.svelte';
-	import Inline from '$lib/article/code/Inline.svelte';
 	import Block from '$lib/article/code/Block.svelte';
 	import ExternalLink from '$lib/ExternalLink.svelte';
+	import Inline from '$lib/article/code/Inline.svelte';
+	import Par from '$lib/article/Par.svelte';
+	import { zig } from '$lib/post/ZigPosts.svelte';
 
 	const { headline, date } = zig.arrayList;
 </script>

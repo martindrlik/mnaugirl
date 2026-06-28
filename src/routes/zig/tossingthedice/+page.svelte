@@ -1,8 +1,8 @@
 <script lang="ts">
 	import Par from '$lib/article/Par.svelte';
 	import Article from '$lib/article/Article.svelte';
-	import { zig } from '$lib/post/Data.svelte';
 	import Block from '$lib/article/code/Block.svelte';
+	import { zig } from '$lib/post/ZigPosts.svelte';
 
 	const { headline, date } = zig.tossingTheDice;
 </script>
