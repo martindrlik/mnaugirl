@@ -1,13 +1,14 @@
 <script lang="ts">
-	import { resolve } from '$app/paths';
-	import { type ResolvedPathname } from '$app/types';
+	import { posts } from '$lib/post/Data.svelte';
+	import PostLink from '$lib/post/PostLink.svelte';
 </script>
 
 <ul>
-	{#snippet link(text: string, href: ResolvedPathname)}
-		<li><a class="text-blue-800 hover:underline hover:text-black text-2xl" {href}>{text}</a></li>
-	{/snippet}
-	{@render link('Terminal: Mini-Tricks', resolve('/terminal/minitricks'))}
-	{@render link('Zig: Tossing the dice', resolve('/zig/tossingthedice'))}
-	{@render link('Zig: ArrayList', resolve('/zig/arraylist'))}
+	<!-- todo {@render link('Zig: async', resolve('/zig/async'))} -->
+	<!-- todo {@render link('Terminal: Mini-Tricks', resolve('/terminal/minitricks'))} -->
+	{#each posts as post (post.headline)}
+		<li>
+			<PostLink {post} />
+		</li>
+	{/each}
 </ul>

@@ -1,22 +1,20 @@
 <script lang="ts">
-	import Body from '$lib/article/Body.svelte';
 	import Par from '$lib/article/Par.svelte';
-	import Headline from '$lib/article/Headline.svelte';
-	import Code from '$lib/article/Code.svelte';
+	import Article from '$lib/article/Article.svelte';
+	import { zig } from '$lib/post/Data.svelte';
+	import Block from '$lib/article/code/Block.svelte';
 
-	const date = 'June 27, 2026';
+	const { headline, date } = zig.tossingTheDice;
 </script>
 
-<article>
-	<Headline {date}>Tossing the dice</Headline>
-	<Body>
-		<Par>
-			Whether you want to let the dice make your life choices or you're just rolling for initiative,
-			sometimes you need to leave things to chance. In this post, we'll explore how to generate
-			random values in Zig:
-		</Par>
-		<Code>
-			{`const std = @import("std");
+<Article {headline} {date}>
+	<Par>
+		Whether you want to let the dice make your life choices or you're just rolling for initiative,
+		sometimes you need to leave things to chance. In this post, we'll explore how to generate random
+		values in Zig:
+	</Par>
+	<Block>
+		{`const std = @import("std");
 
 pub fn main(init: std.process.Init) !void {
     std.debug.print("tossing the dice: {d}\\n", .{roll(init.io)});
@@ -28,6 +26,5 @@ pub fn roll(io: std.Io) u8 {
     return rand.intRangeAtMost(u8, 1, 6);
 }
 `}
-		</Code>
-	</Body>
-</article>
+	</Block>
+</Article>

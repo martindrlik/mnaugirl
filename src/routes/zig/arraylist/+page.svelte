@@ -1,28 +1,27 @@
 <script lang="ts">
-	import Body from '$lib/article/Body.svelte';
 	import Par from '$lib/article/Par.svelte';
-	import Code from '$lib/article/Code.svelte';
-	import CodeInline from '$lib/article/CodeInline.svelte';
-	import Headline from '$lib/article/Headline.svelte';
-	import Link from '$lib/article/Link.svelte';
+	import Article from '$lib/article/Article.svelte';
+	import { zig } from '$lib/post/Data.svelte';
+	import Inline from '$lib/article/code/Inline.svelte';
+	import Block from '$lib/article/code/Block.svelte';
+	import ExternalLink from '$lib/ExternalLink.svelte';
 
-	const date = 'June 27, 2026';
+	const { headline, date } = zig.arrayList;
 </script>
 
-<article>
-	<Headline {date}>Zig: ArrayList</Headline>
-	<Body>
-		<Par>
-			The <Link href="https://ziglang.org/documentation/0.16.0/std/#std.ArrayList"
-				>documentation</Link
-			> describes it as a contiguous, growable list of items in memory. This is a wrapper around a slice
-			of T values. The same allocator must be used throughout its entire lifetime. Initialize directly
-			with <CodeInline code="empty" /> or <CodeInline code="initCapacity" />, and deinitialize with
-			<CodeInline code="deinit" /> or <CodeInline code="toOwnedSlice" />.
-		</Par>
-		<Par>Here is a quick look at how to use it:</Par>
-		<Code>
-			{`const std = @import("std");
+<Article {headline} {date}>
+	<Par>
+		The <ExternalLink
+			style="documentation"
+			href="https://ziglang.org/documentation/0.16.0/std/#std.ArrayList">documentation</ExternalLink
+		> describes it as a contiguous, growable list of items in memory. This is a wrapper around a slice
+		of T values. The same allocator must be used throughout its entire lifetime. Initialize directly with
+		<Inline code="empty" /> or <Inline code="initCapacity" />, and deinitialize with
+		<Inline code="deinit" /> or <Inline code="toOwnedSlice" />.
+	</Par>
+	<Par>Here is a quick look at how to use it:</Par>
+	<Block>
+		{`const std = @import("std");
 const Allocator = std.mem.Allocator;
 const ArrayList = std.ArrayList;
 
@@ -45,6 +44,5 @@ fn showroom(gpa: Allocator) !void {
     }
 }
 `}
-		</Code>
-	</Body>
-</article>
+	</Block>
+</Article>
