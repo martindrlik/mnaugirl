@@ -5,7 +5,8 @@
 
 	export const posts: Post[] = [
 		zig.enum,
-		zig.stdio /* zig.async, */,
+		zig.stdio,
+		zig.async,
 		terminal.miniTricks,
 		zig.tossingTheDice,
 		zig.arrayList
