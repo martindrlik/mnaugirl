@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { formatPostDate } from '$lib/date.svelte';
+	import { formatPostDate } from '$lib/date';
 	import Body from './Body.svelte';
 
 	let { headline, date, children } = $props();
