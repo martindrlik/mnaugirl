@@ -13,6 +13,11 @@
 			date: '2026-06-28',
 			href: resolve('/zig/async')
 		};
+		enum: Post = {
+			headline: 'Zig: enum',
+			date: '2026-06-29',
+			href: resolve('/zig/enum')
+		};
 		stdio: Post = {
 			headline: 'Zig: stdio',
 			date: '2026-06-28',

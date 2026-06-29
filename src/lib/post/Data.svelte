@@ -4,6 +4,7 @@
 	import { zig } from './ZigPosts.svelte';
 
 	export const posts: Post[] = [
+		zig.enum,
 		zig.stdio /* zig.async, */,
 		terminal.miniTricks,
 		zig.tossingTheDice,
