@@ -1,7 +1,7 @@
 <script lang="ts">
+	import EntryLinks from '$lib/entry/EntryLinks.svelte';
 	import MainMenu from '$lib/MainMenu.svelte';
-	import PostLinks from '$lib/post/PostLinks.svelte';
 </script>
 
 <MainMenu />
-<PostLinks />
+<EntryLinks />

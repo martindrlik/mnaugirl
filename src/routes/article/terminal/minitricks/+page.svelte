@@ -4,7 +4,7 @@
 	import Inline from '$lib/article/code/Inline.svelte';
 	import Par from '$lib/article/Par.svelte';
 	import SubArticle from '$lib/article/SubArticle.svelte';
-	import { terminal } from '$lib/post/TerminalPosts.svelte';
+	import { terminal } from '$lib/entry/data';
 
 	const { headline, date } = terminal.miniTricks;
 </script>

@@ -4,7 +4,7 @@
 	import ExternalLink from '$lib/ExternalLink.svelte';
 	import Inline from '$lib/article/code/Inline.svelte';
 	import Par from '$lib/article/Par.svelte';
-	import { zig } from '$lib/post/ZigPosts.svelte';
+	import { zig } from '$lib/entry/data';
 
 	const { headline, date } = zig.arrayList;
 </script>

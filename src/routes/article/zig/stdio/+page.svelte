@@ -3,7 +3,7 @@
 	import Block from '$lib/article/code/Block.svelte';
 	import Inline from '$lib/article/code/Inline.svelte';
 	import Par from '$lib/article/Par.svelte';
-	import { zig } from '$lib/post/ZigPosts.svelte';
+	import { zig } from '$lib/entry/data';
 
 	const { headline, date } = zig.stdio;
 </script>

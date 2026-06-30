@@ -2,7 +2,7 @@
 	import Par from '$lib/article/Par.svelte';
 	import Article from '$lib/article/Article.svelte';
 	import Block from '$lib/article/code/Block.svelte';
-	import { zig } from '$lib/post/ZigPosts.svelte';
+	import { zig } from '$lib/entry/data';
 
 	const { headline, date } = zig.tossingTheDice;
 </script>
