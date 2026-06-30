@@ -18,6 +18,11 @@
 			date: '2026-06-29',
 			href: resolve('/zig/enum')
 		};
+		queue: Post = {
+			headline: 'Zig: queue',
+			date: '2026-06-30',
+			href: resolve('/zig/queue')
+		};
 		stdio: Post = {
 			headline: 'Zig: stdio',
 			date: '2026-06-28',
