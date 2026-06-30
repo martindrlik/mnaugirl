@@ -6,7 +6,7 @@
 		miniTricks: Post = {
 			headline: 'Terminal: Mini-Tricks',
 			date: '2026-06-27',
-			href: resolve('/terminal/minitricks')
+			href: resolve('/article/terminal/minitricks')
 		};
 	}
 
